@@ -1,0 +1,48 @@
+class Bank_Account:
+	def __init__(self):
+		self.balance=0
+		print("Hello!!! Welcome to the Deposit & Withdrawal Machine")
+		val=input("enter depositor name:")
+		print(val)
+		val2=("account number:123457")
+		print(val2)
+		val3=input("type of account:")
+	def deposit(self):
+		amount=float(input("Enter amount to be Deposited: "))
+		self.balance += amount
+		print("\n Amount Deposited:",amount)
+
+	def withdraw(self):
+		amount = float(input("Enter amount to be Withdrawn: "))
+		if self.balance>=amount:
+			self.balance-=amount
+			print("\n You Withdrew:", amount)
+		else:
+			print("\n Insufficient balance ")
+
+	def display(self):
+		print("\n Net Available Balance=",self.balance)
+
+# Driver code
+
+# creating an object of class
+s = Bank_Account()
+
+# Calling functions with that class object
+s.deposit()
+s.withdraw()
+s.display()
+
+Output:-
+Hello!!! Welcome to the Deposit & Withdrawal Machine
+enter depositor name:sejal
+sejal
+account number:123457
+type of account:current account
+Enter amount to be Deposited: 400
+
+ Amount Deposited: 400.0
+Enter amount to be Withdrawn: 100
+You Withdrew: 100.0
+
+ Net Available Balance= 300.0
